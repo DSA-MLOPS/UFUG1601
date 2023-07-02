@@ -9,6 +9,12 @@
 ## Course Overview:
 This course will not only present students with systematic Python programming learning but also incorporate cutting-edge Chat-based AI tools, such as ChatGPT and GitHub Copilot. Each student will have the chance to contribute to the first human-Al collaborative learning experience. If successful, this could potentially revolutionize education, forging a path for many future courses. It's an exciting opportunity to make a real impact.
 
+<p align="center">
+  <img src="hkust-chatgpt.png" alt="case study" width="800">
+  <br>
+  <b>Figure. </b> A case study of HKUST ChatGPT.
+</p>
+
 ## Course Lab
 * HKUST ChatGPT [[Website]](https://gpt.hkust-gz.edu.cn/)[[Tutorial]]()
 * Google Colab [[Website]](https://research.google.com/colaboratory/)[[Tutorial]](https://colab.research.google.com/drive/16pBJQePbqkz3QFV54L4NIkOn1kwpuRrj)
