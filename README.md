@@ -37,6 +37,7 @@ This course will not only present students with systematic Python programming le
 	Exercises involving basic operations with different data types.
 - Exciting Element: 
 	Create a fun interactive quiz using Turtle graphics, where the answers to the questions will involve the data types and variables learned.
+- [Lab Notes](./lab_notes/week_2.md)
 
 ### Week 3: Control Flow in Python - If-Else, While Loop
 - Topics: 
@@ -45,6 +46,7 @@ This course will not only present students with systematic Python programming le
 	Simple exercises that demonstrate the usage of if-else statements and while loops.
 - Exciting Element: 
 	Create a simple game (like guessing a number) using Turtle graphics that utilizes control flow.
+- [Lab Notes](./lab_notes/week_3.md)
 
 ### Week 4: Looping in Python - For Loop, Break, and Continue
 - Topics: 
@@ -53,6 +55,7 @@ This course will not only present students with systematic Python programming le
 	Exercises to practice loops and control statements.
 - Exciting Element: 
 	Develop a pattern generator using Turtle, allowing students to see the immediate results of their loops.
+- [Lab Notes](./lab_notes/week_4.md)
 
 ### Week 5: Data Structures in Python - Lists and Dictionaries
 - Topics: 
@@ -61,6 +64,7 @@ This course will not only present students with systematic Python programming le
 	Create, manipulate, and explore lists and dictionaries with a series of exercises.
 - Exciting Element: 
 	Develop an interactive word game (like Hangman) using lists and dictionaries.
+- [Lab Notes](./lab_notes/week_5.md)
 
 ### Week 6: Functions and Modularization in Python
 - Topics: 
@@ -69,6 +73,7 @@ This course will not only present students with systematic Python programming le
 	Write simple functions, including those with multiple parameters and return values.
 - Exciting Element: 
 	Host a code challenge where students create a complex shape or image using Turtle graphics by writing and calling their own functions.
+- [Lab Notes](./lab_notes/week_6.md)
 
 ### Week 7: Basic Object Concepts - Classes and Objects
 - Topics: 
@@ -77,6 +82,7 @@ This course will not only present students with systematic Python programming le
 	Create a class, instantiate an object from it, and modify its attributes.
 - Exciting Element: 
 	Construct simple simulations (like bouncing balls) using classes and objects in Turtle graphics.
+- [Lab Notes](./lab_notes/week_7.md)
 
 ### Week 8: Basic File Handling
 - Topics: 
@@ -85,6 +91,7 @@ This course will not only present students with systematic Python programming le
 	Write a program that reads data from a file and writes data to a file.
 - Exciting Element: 
 	Create a simple program that generates Turtle graphics based on commands read from a file.
+- [Lab Notes](./lab_notes/week_8.md)
 
 ### Week 9: Review and Advanced Topics
 - Topics: 
@@ -93,6 +100,7 @@ This course will not only present students with systematic Python programming le
 	Solve complex problems that use all the concepts learned so far.
 - Exciting Element: 
 	Design and code a more sophisticated game or graphics program in Turtle that uses these advanced concepts.
+- [Lab Notes](./lab_notes/week_9.md)
 
 ### Week 10: Final Project and Wrap-Up
 - Topics: 
