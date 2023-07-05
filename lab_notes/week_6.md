@@ -51,4 +51,4 @@ Discuss with students about their previous codes and guide them on how to modula
 
 As a homework assignment, students should write a more complex program that consists of multiple functions. They could, for instance, expand their "database" program from the previous homework assignment to include functions for saving the database to a file and loading it from a file.
 
-[**Tips** https://github.githubassets.com/images/icons/emoji/unicode/1f4a1.png?v8] Thinking about how breaking code down into functions makes it easier to understand and maintain. This will be especially important as you start to work on larger and more complex programs.
+[**Tips** :bulb:] Thinking about how breaking code down into functions makes it easier to understand and maintain. This will be especially important as you start to work on larger and more complex programs.
