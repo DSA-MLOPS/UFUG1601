@@ -16,9 +16,9 @@ This course will not only present students with systematic Python programming le
 </p>
 
 ## Course Lab
-* HKUST ChatGPT [[Website]](https://gpt.hkust-gz.edu.cn/)[[Tutorial]]()
-* Google Colab [[Website]](https://research.google.com/colaboratory/)[[Tutorial]](https://colab.research.google.com/drive/16pBJQePbqkz3QFV54L4NIkOn1kwpuRrj)
-* GitHub Copilot [[Website]](https://github.com/features/copilot)
+* HKUST ChatGPT [[Website](https://gpt.hkust-gz.edu.cn/)][[Tutorial]()]
+* Google Colab [[Website](https://research.google.com/colaboratory/)][[Tutorial](https://colab.research.google.com/drive/16pBJQePbqkz3QFV54L4NIkOn1kwpuRrj)]
+* GitHub Copilot [[Website](https://github.com/features/copilot)]
 
 ## Course Outline:
 
