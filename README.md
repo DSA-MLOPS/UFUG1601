@@ -22,7 +22,7 @@ This course will not only present students with systematic Python programming le
 
 ## Course Outline:
 
-### Week 1: Introduction to Python and the Environment [[slides]]()
+### Week 1: Introduction to Python and the Environment [[slides]()]
 - Topics: 
 	Python history, installing Python, setting up your coding environment, the interpreter, basic commands, and introduction to Python’s syntax and semantics.
 - Practical: 
@@ -30,7 +30,7 @@ This course will not only present students with systematic Python programming le
 - Exciting Element: 
 	Host an icebreaker challenge, where students can share fun facts about Python or programming in general.
 
-### Week 2: Variables, Data Types, and Assignments [[slides]]()
+### Week 2: Variables, Data Types, and Assignments [[slides]()]
 - Topics: 
 	Discuss different data types like integers, floating-point numbers, strings, and booleans. Also cover variables and assignments.
 - Practical: 
@@ -39,7 +39,7 @@ This course will not only present students with systematic Python programming le
 	Create a fun interactive quiz using Turtle graphics, where the answers to the questions will involve the data types and variables learned.
 - [Lab Notes](./lab_notes/week_2.md)
 
-### Week 3: Control Flow in Python - If-Else, While Loop [[slides]]()
+### Week 3: Control Flow in Python - If-Else, While Loop [[slides]()]
 - Topics: 
 	Discuss control flow tools like if, elif, else and while loop. Introduction to indentation in Python.
 - Practical: 
@@ -48,7 +48,7 @@ This course will not only present students with systematic Python programming le
 	Create a simple game (like guessing a number) using Turtle graphics that utilizes control flow.
 - [Lab Notes](./lab_notes/week_3.md)
 
-### Week 4: Looping in Python - For Loop, Break, and Continue [[slides]]()
+### Week 4: Looping in Python - For Loop, Break, and Continue [[slides]()]
 - Topics: 
 	Discuss for loop, break and continue statements. Distinguish between for and while loops.
 - Practical: 
@@ -57,7 +57,7 @@ This course will not only present students with systematic Python programming le
 	Develop a pattern generator using Turtle, allowing students to see the immediate results of their loops.
 - [Lab Notes](./lab_notes/week_4.md)
 
-### Week 5: Data Structures in Python - Lists and Dictionaries [[slides]]()
+### Week 5: Data Structures in Python - Lists and Dictionaries [[slides]()]
 - Topics: 
 	Introduction to Python’s data structures, specifically lists and dictionaries.
 - Practical: 
@@ -66,7 +66,7 @@ This course will not only present students with systematic Python programming le
 	Develop an interactive word game (like Hangman) using lists and dictionaries.
 - [Lab Notes](./lab_notes/week_5.md)
 
-### Week 6: Functions and Modularization in Python [[slides]]()
+### Week 6: Functions and Modularization in Python [[slides]()]
 - Topics: 
 	Define what functions are, their use, and the importance of modularization in coding. Introduce the concept of parameters and return values.
 - Practical: 
@@ -75,7 +75,7 @@ This course will not only present students with systematic Python programming le
 	Host a code challenge where students create a complex shape or image using Turtle graphics by writing and calling their own functions.
 - [Lab Notes](./lab_notes/week_6.md)
 
-### Week 7: Basic Object Concepts - Classes and Objects [[slides]]()
+### Week 7: Basic Object Concepts - Classes and Objects [[slides]()]
 - Topics: 
 	Discuss Object-Oriented Programming, classes, objects, methods, and attributes.
 - Practical: 
@@ -84,7 +84,7 @@ This course will not only present students with systematic Python programming le
 	Construct simple simulations (like bouncing balls) using classes and objects in Turtle graphics.
 - [Lab Notes](./lab_notes/week_7.md)
 
-### Week 8: Basic File Handling [[slides]]()
+### Week 8: Basic File Handling [[slides]()]
 - Topics: 
 	Introduce how to open, read, write, and close files in Python.
 - Practical: 
@@ -93,7 +93,7 @@ This course will not only present students with systematic Python programming le
 	Create a simple program that generates Turtle graphics based on commands read from a file.
 - [Lab Notes](./lab_notes/week_8.md)
 
-### Week 9: Review and Advanced Topics [[slides]]()
+### Week 9: Review and Advanced Topics [[slides]()]
 - Topics: 
 	Quick review of the material covered so far. Introduction to some more advanced topics like list comprehension, lambda functions, and exception handling.
 - Practical: 
@@ -102,7 +102,7 @@ This course will not only present students with systematic Python programming le
 	Design and code a more sophisticated game or graphics program in Turtle that uses these advanced concepts.
 - [Lab Notes](./lab_notes/week_9.md)
 
-### Week 10: Final Project and Wrap-Up [[slides]]()
+### Week 10: Final Project and Wrap-Up [[slides]()]
 - Topics: 
 	Review the entire course, clarify doubts, and discuss more resources to learn Python.
 - Practical: 
