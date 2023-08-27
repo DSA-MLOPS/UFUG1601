@@ -29,6 +29,7 @@ This course will not only present students with systematic Python programming le
 	Setting up the environment, writing a simple “Hello World” program.
 - Exciting Element: 
 	Host an icebreaker challenge, where students can share fun facts about Python or programming in general.
+- How to use ChatGPT: https://medium.com/mlearning-ai/i-scanned-1000-prompts-so-you-dont-have-to-10-need-to-know-techniques-a77bcd074d97
 
 ### Week 2 (Sep 15): Variables, Data Types, and Assignments [[slides]()]
 - Topics: 
