@@ -1,18 +1,22 @@
-# UFUG1601: Python Programming with ChatGPT/CodeGPT
-### Fall 2023
+# UFUG1601: Introduction to Computer Science
+
+### Fall 2023: Friday 03:00PM - 05:50PM HKT
+### Lab Training: Lab 1 (Mon. 04:30PM - 05:20PM), Lab 2 (Tue. 09:00AM - 09:50AM), Lab 3 (Tue. 10:30AM - 11:20AM), and Lab 4 (Wed. 05:00PM - 05:50PM)
 
 ## Instructors
-* Sung Kim
-* Juyong Jiang [TA]
-* Qin Le [TA]
+* Sunghun Kim (Lecture)
+* Yongzhi Huang (TA-Lab 1)
+* Juyong Jiang (TA-Lab 2)
+* Xuan He (TA-Lab 3)
+* Keyuan Fang (TA-Lab 4)
 
 ## Course Overview:
-This course will not only present students with systematic Python programming learning but also incorporate cutting-edge Chat-based AI tools, such as ChatGPT and GitHub Copilot. Each student will have the chance to contribute to the first human-Al collaborative learning experience. If successful, this could potentially revolutionize education, forging a path for many future courses. It's an exciting opportunity to make a real impact.
+This foundational course serves as a gateway to the dynamic world of computing, algorithms, data structures, and software development. It will not only present students with systematic Python programming learning but also incorporate cutting-edge Chat-based AI tools, such as ChatGPT and GitHub Copilot. Each student will have the chance to contribute to the first human-Al collaborative learning experience. If successful, this could potentially revolutionize education, forging a path for many future courses. It's an exciting opportunity to make a real impact.
 
 <p align="center">
-  <img src="hkust-chatgpt.png" alt="case study" width="800">
+  <img src="./snake_demo.jpg" alt="case study" width="800">
   <br>
-  <b>Figure. </b> A case study of HKUST ChatGPT.
+  <b>Figure. </b> A snake demo of HKUST ChatGPT.
 </p>
 
 ## Course Lab
@@ -30,6 +34,7 @@ This course will not only present students with systematic Python programming le
 - Exciting Element: 
 	Host an icebreaker challenge, where students can share fun facts about Python or programming in general.
 - How to use ChatGPT: https://medium.com/mlearning-ai/i-scanned-1000-prompts-so-you-dont-have-to-10-need-to-know-techniques-a77bcd074d97
+- [Lab Notes](./lab_notes/week_1.pdf)
 
 ### Week 2 (Sep 15): Variables, Data Types, and Assignments [[slides]()]
 - Topics: 
