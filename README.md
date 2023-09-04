@@ -1,7 +1,11 @@
-# UFUG1601: Introduction to Computer Science
+# UFUG 1601: Introduction to Computer Science
 
 ### Fall 2023: Friday 03:00PM - 05:50PM HKT
-### Lab Training: Lab 1 (Mon. 04:30PM - 05:20PM), Lab 2 (Tue. 09:00AM - 09:50AM), Lab 3 (Tue. 10:30AM - 11:20AM), and Lab 4 (Wed. 05:00PM - 05:50PM)
+### Lab Training
+* Lab 1 (Mon. 04:30PM - 05:20PM)
+* Lab 2 (Tue. 09:00AM - 09:50AM)
+* Lab 3 (Tue. 10:30AM - 11:20AM)
+* Lab 4 (Wed. 05:00PM - 05:50PM)
 
 ## Instructors
 * Sunghun Kim (Lecture)
