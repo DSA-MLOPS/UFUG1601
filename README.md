@@ -14,6 +14,8 @@
 * Juyong Jiang (TA-Lab 2)
 * Xuan He (TA-Lab 3)
 * Keyuan Fang (TA-Lab 4)
+<img width="744" alt="image" src="https://github.com/DSA-MLOPS/UFUG1601/assets/901975/6335cfb5-8eaa-47f2-b600-e2b0165aaaf6">
+
 
 ## Course Overview:
 This foundational course serves as a gateway to the dynamic world of computing, algorithms, data structures, and software development. It will not only present students with systematic Python programming learning but also incorporate cutting-edge Chat-based AI tools, such as ChatGPT and GitHub Copilot. Each student will have the chance to contribute to the first human-Al collaborative learning experience. If successful, this could potentially revolutionize education, forging a path for many future courses. It's an exciting opportunity to make a real impact.
