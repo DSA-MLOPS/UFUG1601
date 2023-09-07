@@ -1,7 +1,7 @@
 # UFUG 1601: Introduction to Computer Science, Python programming with chatgpt
 
 
-### Fall 2023: Friday 03:00PM - 05:50PM HKT
+### Fall 2023: Friday 03:00PM - 05:50PM HKT @Lecture Hall C
 ### Lab Training
 * Lab 1 (Mon. 04:30PM - 05:20PM)
 * Lab 2 (Tue. 09:00AM - 09:50AM)
