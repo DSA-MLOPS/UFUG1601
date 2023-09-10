@@ -21,14 +21,17 @@ Anaconda is a popular choice among data scientists for several reasons:
 
 ## Step-by-Step Installation Guide
 Anaconda is a cross-platform Python distribution that you can install on Windows, macOS, or different distributions of Linux.
+**Note that** if you already have Python installed, you don’t need to uninstall it. You can still go ahead and install Anaconda and use the Python version that comes along with Anaconda distribution.
 
-**NOTE** If you already have Python installed, you don’t need to uninstall it. You can still go ahead and install Anaconda and use the Python version that comes along with Anaconda distribution.
+**Installing on Windows [[Link]](https://docs.anaconda.com/free/anaconda/install/windows/)**
 
-### Installing on Windows [[Link]](https://docs.anaconda.com/free/anaconda/install/windows/)
-### Installing on macOS [[Link]](https://docs.anaconda.com/free/anaconda/install/mac-os/)
-### Installing on Linux [[Link]](https://docs.anaconda.com/free/anaconda/install/linux/)
-### Verifying your installation [[Link]](https://docs.anaconda.com/free/anaconda/install/verify-install/)
-### Uninstalling Anaconda Distribution [[Link]](https://docs.anaconda.com/free/anaconda/install/uninstall/)
+**Installing on macOS [[Link]](https://docs.anaconda.com/free/anaconda/install/mac-os/)**
+
+**Installing on Linux [[Link]](https://docs.anaconda.com/free/anaconda/install/linux/)**
+
+**Verifying your installation [[Link]](https://docs.anaconda.com/free/anaconda/install/verify-install/)**
+
+**Uninstalling Anaconda Distribution [[Link]](https://docs.anaconda.com/free/anaconda/install/uninstall/)**
 
 ## How to Use Conda
 In this section, we will learn how to use Conda to `create`, `activate`, and `deactivate` **virtual environments**. In addition, we will discuss `installing/uninstalling packages` in an environment and `managing channels`.
@@ -45,6 +48,7 @@ conda 4.12.0
 The default environment in Anaconda is the base environment that is created when you install Anaconda. So, every time you open a terminal window, the environment’s name appears in parentheses at the start of the terminal prompt. The base environment contains `conda`` as well as more than 400 pre-installed packages. Now, let’s discuss how we can manage environments with conda commands.
 
 **1. Conda Environment Management**
+
 ```bash
 # create a conda environment with the name of `env_name`
 conda create --name[--n] env_name 
@@ -75,6 +79,7 @@ conda remove -n env_name_old --all
 ```
 
 **2. Conda Packages Management**
+
 ```bash
 # install package in current active environment or [in specific environment `env_name`]
 conda install [-n env_name] package-name
@@ -116,6 +121,7 @@ conda update anaconda-navigator
 ```
 
 **3. Reproducing a Conda Environment**
+
 It’s a common task to reproduce an environment on your computer or other computers. Conda (pip) allows us to make a YAML (TXT) file that contains all the installed packages in an environment along with the versions. 
 
 ```bash
@@ -132,6 +138,7 @@ pip install -r requirements.txt
 ```
 
 **4. Managing Conda Channels**
+
 `Channels` are Conda’s package repositories hosted on remote servers. Conda searches these repositories containing Conda packages whenever you want to install a package. Then the package will automatically be downloaded and installed from the channels. 
 
 ```bash
@@ -176,7 +183,6 @@ If you don’t like managing environments and packages by typing Conda commands 
 
 ## Snake Game Demo
 **Step 1:** 
-
 Prompting HKUST ChatGPT as follows:
 
 ```bash
@@ -184,11 +190,9 @@ Acting as a game programming developer, you are required to develop a Snake game
 ```
 
 **Step 2:**
-
 Copying and paste the response of HKUST ChatGPT into a file with `.py` file extension and `snake` file name. 
 
 **Step 3:**
-
 Installing Python dependencies (packages) and then run the script as follows: 
 ```bash
 conda install pygame
