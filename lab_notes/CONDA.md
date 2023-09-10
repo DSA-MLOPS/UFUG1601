@@ -1,4 +1,25 @@
 # Install & Use Anaconda on Windows, Mac, and Linux: A Comprehensive Guide
+## Table of Contents
+- [Overview](#overview)
+- [What is the Anaconda Distribution?](#what-is-the-anaconda-distribution)
+- [Why Anaconda?](#why-anaconda)
+- [Step-by-Step Installation Guide](#step-by-step-installation-guide)
+  - [Installing on Windows](#installing-on-windows-link)
+  - [Installing on macOS](#installing-on-macos-link)
+  - [Installing on Linux](#installing-on-linux-link)
+  - [Verifying your installation](#verifying-your-installation-link)
+  - [Uninstalling Anaconda Distribution](#uninstalling-anaconda-distribution-link)
+- [How to Use Conda](#how-to-use-conda)
+  - [1. Conda Environment Management](#1-conda-environment-management)
+  - [2. Conda Packages Management](#2-conda-packages-management)
+  - [3. Reproducing a Conda Environment](#3-reproducing-a-conda-environment)
+  - [4. Managing Conda Channels](#4-managing-conda-channels)
+  - [5. Execute Python Script](#5-execute-python-script)
+- [Snake Game Demo](#snake-game-demo)
+- [Jupyter Notebook & Google Colab](#jupyter-notebook--google-colab)
+- [Reference](#reference)
+
+## Overview
 Python is a versatile language that has found its way into various fields, from web development to data science. However, managing Python environments can be a bit tricky, especially when you have multiple projects with different dependencies. This is where Anaconda comes in. Anaconda is a free and open-source distribution of Python and R for scientific computing. It simplifies package management and deployment, making it easier to manage your Python environments. In this guide, we’ll walk you through the process of installing Anaconda over an existing Python system.
 
 ## What is the Anaconda Distribution?
@@ -23,15 +44,15 @@ Anaconda is a popular choice among data scientists for several reasons:
 Anaconda is a cross-platform Python distribution that you can install on Windows, macOS, or different distributions of Linux.
 **Note that** if you already have Python installed, you don’t need to uninstall it. You can still go ahead and install Anaconda and use the Python version that comes along with Anaconda distribution.
 
-**Installing on Windows [[Link]](https://docs.anaconda.com/free/anaconda/install/windows/)**
+#### Installing on Windows [[Link]](https://docs.anaconda.com/free/anaconda/install/windows/)
 
-**Installing on macOS [[Link]](https://docs.anaconda.com/free/anaconda/install/mac-os/)**
+#### Installing on macOS [[Link]](https://docs.anaconda.com/free/anaconda/install/mac-os/)
 
-**Installing on Linux [[Link]](https://docs.anaconda.com/free/anaconda/install/linux/)**
+#### Installing on Linux [[Link]](https://docs.anaconda.com/free/anaconda/install/linux/)
 
-**Verifying your installation [[Link]](https://docs.anaconda.com/free/anaconda/install/verify-install/)**
+#### Verifying your installation [[Link]](https://docs.anaconda.com/free/anaconda/install/verify-install/)
 
-**Uninstalling Anaconda Distribution [[Link]](https://docs.anaconda.com/free/anaconda/install/uninstall/)**
+#### Uninstalling Anaconda Distribution [[Link]](https://docs.anaconda.com/free/anaconda/install/uninstall/)
 
 ## How to Use Conda
 In this section, we will learn how to use Conda to `create`, `activate`, and `deactivate` **virtual environments**. In addition, we will discuss `installing/uninstalling packages` in an environment and `managing channels`.
@@ -47,7 +68,7 @@ conda 4.12.0
 
 The default environment in Anaconda is the base environment that is created when you install Anaconda. So, every time you open a terminal window, the environment’s name appears in parentheses at the start of the terminal prompt. The base environment contains `conda`` as well as more than 400 pre-installed packages. Now, let’s discuss how we can manage environments with conda commands.
 
-**1. Conda Environment Management**
+#### 1. Conda Environment Management
 
 ```bash
 # create a conda environment with the name of `env_name`
@@ -78,7 +99,7 @@ conda create -n env_name_new --clone env_name_old
 conda remove -n env_name_old --all 
 ```
 
-**2. Conda Packages Management**
+#### 2. Conda Packages Management
 
 ```bash
 # install package in current active environment or [in specific environment `env_name`]
@@ -120,7 +141,7 @@ conda update python
 conda update anaconda-navigator   
 ```
 
-**3. Reproducing a Conda Environment**
+#### 3. Reproducing a Conda Environment
 
 It’s a common task to reproduce an environment on your computer or other computers. Conda (pip) allows us to make a YAML (TXT) file that contains all the installed packages in an environment along with the versions. 
 
@@ -137,7 +158,7 @@ pip freeze > requirements.txt
 pip install -r requirements.txt
 ```
 
-**4. Managing Conda Channels**
+#### 4. Managing Conda Channels
 
 `Channels` are Conda’s package repositories hosted on remote servers. Conda searches these repositories containing Conda packages whenever you want to install a package. Then the package will automatically be downloaded and installed from the channels. 
 
@@ -171,7 +192,8 @@ conda config --add channels channels_urls
 conda install package-name
 ```
 
-**5. Execute Python Script**
+#### 5. Execute Python Script
+
 After you create a conda virtual environment along with required packages, you can run python script in your terminal. 
 ```bash
 conda activate env_name
@@ -182,6 +204,7 @@ python script_name.py # e.g., snake.py
 If you don’t like managing environments and packages by typing Conda commands in a command-line shell, you can use Anaconda Navigator. Navigator provides a graphical user interface (GUI) to manage environments and packages without using Conda commands. Nevertheless, Conda commands are recommended. 
 
 ## Snake Game Demo
+
 **Step 1:** 
 Prompting HKUST ChatGPT as follows:
 
