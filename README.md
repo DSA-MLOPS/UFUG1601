@@ -23,7 +23,7 @@ This foundational course serves as a gateway to the dynamic world of computing, 
 <p align="center">
   <img src="./snake_demo.jpg" alt="case study" width="800">
   <br>
-  <b>Figure. </b> A snake demo of HKUST ChatGPT.
+  <b>Figure 1.</b> A snake demo of HKUST ChatGPT.
 </p>
 
 ## Course Lab
