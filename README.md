@@ -47,7 +47,7 @@ This foundational course serves as a gateway to the dynamic world of computing, 
 
 ---
 
-> [Install & Use Anaconda on Windows, Mac, and Linux: A Comprehensive Guide](./lab_notes/CONDA.md)
+[Install & Use Anaconda on Windows, Mac, and Linux: A Comprehensive Guide](./lab_notes/CONDA.md)
 
 ---
 
