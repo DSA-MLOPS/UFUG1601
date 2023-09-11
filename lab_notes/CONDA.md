@@ -213,7 +213,7 @@ Acting as a game programming developer, you are required to develop a Snake game
 Could you provide a detailed source code for it? Also, give a simple demo with a friendly user interface. 
 ```
 
-***Note that if you don't obtain a good source code of snake game from HKUST ChatGPT, you can directly use [this script](./snake.py).**
+Note that if you don't obtain a good source code of snake game from HKUST ChatGPT, you can directly use [this script](./snake.py).
 
 **Step 2:**
 Copying and paste the response of HKUST ChatGPT into a file with `.py` file extension and `snake` file name. 
