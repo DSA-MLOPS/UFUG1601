@@ -15,6 +15,7 @@
   - [3. Reproducing a Conda Environment](#3-reproducing-a-conda-environment)
   - [4. Managing Conda Channels](#4-managing-conda-channels)
   - [5. Execute Python Script](#5-execute-python-script)
+  - [6. Conda Use Example](#6-conda-use-example)
 - [Snake Game Demo](#snake-game-demo)
 - [Jupyter Notebook & Google Colab & VSCode](#jupyter-notebook--google-colab--vscode)
 - [Reference](#reference)
