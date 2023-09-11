@@ -43,8 +43,11 @@ This foundational course serves as a gateway to the dynamic world of computing, 
 - How to use ChatGPT: https://medium.com/mlearning-ai/i-scanned-1000-prompts-so-you-dont-have-to-10-need-to-know-techniques-a77bcd074d97
 - [screencapture-medium-mlearning-ai-i-scanned-1000-prompts-so-you-dont-have-to-10-need-to-know-techniques-a77bcd074d97-2023-09-07-06_10_05.pdf](https://github.com/DSA-MLOPS/UFUG1601/files/12542600/screencapture-medium-mlearning-ai-i-scanned-1000-prompts-so-you-dont-have-to-10-need-to-know-techniques-a77bcd074d97-2023-09-07-06_10_05.pdf)
 
-
 - [Lab Notes](./lab_notes/week_1.pdf) | [Snake Game](./lab_notes/snake.py)
+
+---
+[Install & Use Anaconda on Windows, Mac, and Linux: A Comprehensive Guide](./lab_notes/CONDA.md)
+---
 
 ### Week 2 (Sep 15): Variables, Data Types, and Assignments [[slides]()]
 - Topics: 
