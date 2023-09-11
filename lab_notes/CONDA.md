@@ -77,8 +77,8 @@ conda create --name[--n] env_name python # with the latest version of Python
 conda create --name[--n] env_name python=3.8 # with a specific Python version, e.g., 3.8
 
 # activate a conda environment
-activate python36 # for Windows
-conda activate python36 # for Linux & Mac
+activate env_name # for Windows
+conda activate env_name # for Linux & Mac
 
 # display the active environment details
 python [--version][--v] # Windows
@@ -169,7 +169,7 @@ conda config --get channels
 # reveal the URLs to the default channel’s folders
 conda config --show default_channels
 # add new channels
-conda config --add channels channels_urls  
+conda config --add channels channels_urls/channels_name  
 # e.g., add the channels mirrors of Tsinghua university as follows:
 # conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
 # conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
@@ -198,6 +198,22 @@ After you create a conda virtual environment along with required packages, you c
 ```bash
 conda activate env_name
 python script_name.py # e.g., snake.py
+```
+
+#### 6. Conda Use Example
+
+```bash
+(base) john@MacBook-Pro UFUG1601 % conda create --name ufug1601 python=3.8
+(base) john@MacBook-Pro UFUG1601 % conda activate ufug1601
+(ufug1601) john@MacBook-Pro UFUG1601 % conda --version
+(ufug1601) john@MacBook-Pro UFUG1601 % conda info
+(ufug1601) john@MacBook-Pro UFUG1601 % conda env list
+(ufug1601) john@MacBook-Pro UFUG1601 % conda list
+(ufug1601) john@MacBook-Pro UFUG1601 % conda install pandas
+(ufug1601) john@MacBook-Pro UFUG1601 % conda config --show channels
+(ufug1601) john@MacBook-Pro UFUG1601 % conda config --add channels conda-forge
+# run snake.py script
+(ufug1601) john@MacBook-Pro UFUG1601 % python snake.py
 ```
 
 **Note that** 
