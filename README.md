@@ -46,7 +46,9 @@ This foundational course serves as a gateway to the dynamic world of computing, 
 - [Lab Notes](./lab_notes/week_1.pdf) | [Snake Game](./lab_notes/snake.py)
 
 ---
-[Install & Use Anaconda on Windows, Mac, and Linux: A Comprehensive Guide](./lab_notes/CONDA.md)
+
+> [Install & Use Anaconda on Windows, Mac, and Linux: A Comprehensive Guide](./lab_notes/CONDA.md)
+
 ---
 
 ### Week 2 (Sep 15): Variables, Data Types, and Assignments [[slides]()]
