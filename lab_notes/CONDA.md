@@ -16,7 +16,7 @@
   - [4. Managing Conda Channels](#4-managing-conda-channels)
   - [5. Execute Python Script](#5-execute-python-script)
 - [Snake Game Demo](#snake-game-demo)
-- [Jupyter Notebook & Google Colab](#jupyter-notebook--google-colab)
+- [Jupyter Notebook & Google Colab & VSCode](#jupyter-notebook--google-colab--vscode)
 - [Reference](#reference)
 
 ## Overview
@@ -59,14 +59,14 @@ In this section, we will learn how to use Conda to `create`, `activate`, and `de
 
 If you want to learn more about Python virtual environments, you can read [A Complete Guide to Python Virtual Environments](https://www.dataquest.io/blog/a-complete-guide-to-python-virtual-environments/) on the Dataquest blog.
 
-First, let’s check the `conda`` version installed on our computers. To do so, open a terminal window on macOS/Linux or an Anaconda Prompt on Windows, then run the following command:
+First, let’s check the `conda` version installed on our computers. To do so, open a terminal window on macOS/Linux or an Anaconda Prompt on Windows, then run the following command:
 
 ```bash
 (base) ~ % conda --version or --v
 conda 4.12.0
 ```
 
-The default environment in Anaconda is the base environment that is created when you install Anaconda. So, every time you open a terminal window, the environment’s name appears in parentheses at the start of the terminal prompt. The base environment contains `conda`` as well as more than 400 pre-installed packages. Now, let’s discuss how we can manage environments with conda commands.
+The default environment in Anaconda is the base environment that is created when you install Anaconda. So, every time you open a terminal window, the environment’s name appears in parentheses at the start of the terminal prompt. The base environment contains `conda` as well as more than 400 pre-installed packages. Now, let’s discuss how we can manage environments with conda commands.
 
 #### 1. Conda Environment Management
 
@@ -228,11 +228,12 @@ python snake.py
   <b>Figure 1.</b> A snake demo of HKUST ChatGPT.
 </p>
 
-## Jupyter Notebook & Google Colab
+## Jupyter Notebook & Google Colab & VSCode
 The heart of the Anaconda distribution is the [`Jupyter Notebook`](https://jupyter.org/); data scientists love Jupyter Notebook because it simplifies developing and presenting their projects `interactively`. If you're interested in learning more about Jupyter Notebook, there is an excellent tutorial on the Dataquest blog at [How to Use Jupyter Notebook in 2020: A Beginner’s Tutorial](https://www.dataquest.io/blog/jupyter-notebook-tutorial/).
 
 [`Google Colab`](https://colab.research.google.com/) is a hosted Jupyter Notebook service that requires no setup to use and provides free access to computing resources, including GPUs and TPUs. Colab is especially well suited to machine learning, data science, and education. There is a Google Colab tutorial at [Google Colab Tutorial for Data Scientists](https://www.datacamp.com/tutorial/tutorial-google-colab-for-data-scientists).
 
+[`Visual Studio Code`](https://visualstudio.microsoft.com/), also commonly referred to as **VS Code**, is a `lightweight but powerful` source code editor which runs on your desktop and is available for Windows, macOS and Linux. It comes with built-in support for JavaScript, TypeScript and Node.js and has a rich ecosystem of extensions for other languages and runtimes (such as C++, C#, Java, Python, PHP, Go, .NET). If you want to set up VSCode for Python, please reviewing this tutorial at [Setting Up VSCode For Python: A Complete Guide](https://www.datacamp.com/tutorial/setting-up-vscode-python). 
 
 ## Reference
 * [https://docs.anaconda.com/free/anaconda/install/](https://docs.anaconda.com/free/anaconda/install/)
