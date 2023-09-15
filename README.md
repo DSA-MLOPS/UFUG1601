@@ -9,7 +9,7 @@
 * Lab 4 (Wed. 05:00PM - 05:50PM)
 
 ## Instructors
-* Sunghun Kim (Lecture)
+* Sung Kim (Lecture)
 * Yongzhi Huang (TA-Lab 1)
 * Juyong Jiang (TA-Lab 2)
 * Xuan He (TA-Lab 3)
