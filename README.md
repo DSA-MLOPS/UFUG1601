@@ -138,7 +138,11 @@ Overall, the course will provide students with a solid foundation in Python prog
 ## Use ChatGPT at ALL times
 ![image](https://github.com/DSA-MLOPS/UFUG1601/assets/901975/a9658f27-fc64-4799-af93-cae80ec2fdb7)
 
+<img width="895" alt="image" src="https://github.com/DSA-MLOPS/UFUG1601/assets/901975/65c04aea-2cdb-42f1-b3eb-db10a0ff747e">
+
+
 ## References
+* BOOK1: https://greenteapress.com/wp/think-python-2e/
 * [Harvard CS50’s Introduction to Programming with Python](https://cs50.harvard.edu/python/2022/)
 * [Introducing ChatGPT](https://openai.com/blog/chatgpt)
 * [OpenAI Codex](https://openai.com/blog/openai-codex)
