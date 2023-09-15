@@ -135,6 +135,9 @@ This foundational course serves as a gateway to the dynamic world of computing, 
 
 Overall, the course will provide students with a solid foundation in Python programming, as well as Chat-based AI tools assistant experience. This skill plays a foundation role in research and development in the field of new era of artificial intelligence (AI). The course will be taught by Sung Kim, who has extensive experience in the field and has worked on a variety of LLM-based projects.
 
+## Use ChatGPT at ALL times
+![image](https://github.com/DSA-MLOPS/UFUG1601/assets/901975/a9658f27-fc64-4799-af93-cae80ec2fdb7)
+
 ## References
 * [Harvard CS50’s Introduction to Programming with Python](https://cs50.harvard.edu/python/2022/)
 * [Introducing ChatGPT](https://openai.com/blog/chatgpt)
