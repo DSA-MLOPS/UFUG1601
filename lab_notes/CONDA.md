@@ -72,17 +72,17 @@ The default environment in Anaconda is the base environment that is created when
 #### 1. Conda Environment Management
 
 ```bash
-# create a conda environment with the name of `env_name`
-conda create --name[--n] env_name 
-conda create --name[--n] env_name python # with the latest version of Python
-conda create --name[--n] env_name python=3.8 # with a specific Python version, e.g., 3.8
+# create a conda environment with the name of `env_name`, which means any name you like
+conda create --name env_name 
+conda create --name env_name python # with the latest version of Python
+conda create --name env_name python=3.8 # with a specific Python version, e.g., 3.8
 
 # activate a conda environment
 activate env_name # for Windows
 conda activate env_name # for Linux & Mac
 
 # display the active environment details
-python [--version][--v] # Windows
+python --version # Windows
 which python # Linux & Mac
 conda info 
 # list all virtual environments of anaconda
@@ -91,7 +91,7 @@ conda env list
 
 # deactivate a conda environment
 deactivate  # Windows
-conda deactivate [env_name] # Linux & Mac
+conda deactivate # Linux & Mac
 
 # delete a conda environment
 conda remove --name env_name --all
@@ -103,17 +103,17 @@ conda remove -n env_name_old --all
 #### 2. Conda Packages Management
 
 ```bash
-# install package in current active environment or [in specific environment `env_name`]
-conda install [-n env_name] package-name
-conda install [-n env_name] package-name=1.2.x # specify version number
+# install package in current active environment
+conda install package-name
+conda install package-name=1.2.x # specify version number
 pip install package-name==1.2.x # if you use pip install, use `==` instead of `=`
-conda install [-n env_name] package-name_1 package-name_2 package-name_3 # install a set of packages 1, 2, 3
+conda install package-name_1 package-name_2 package-name_3 # install a set of packages 1, 2, 3
 
 # conda (pip) install from configuration file `requirements.txt`
 pip install -r requirements.txt
 
 # install package in a specific channel
-conda install --channel[-c] https://conda.anaconda.org/anaconda package-name
+conda install --channel https://conda.anaconda.org/anaconda package-name
 # pip install package locally
 pip install ～/Downloads/package-name.whl
 # install package locally
@@ -121,16 +121,16 @@ conda install --use-local  ~/Downloads/package-name.tar.bz2
 
 # uninstall package
 conda uninstall package-name
-# delete package in current active environment or [in a specific conda environment `env_name`]
-conda remove [-n env_name] package-name
+# delete package in current active environment
+conda remove package-name
 
-# list installed packages in current active environment or [in specific environment `env_name`]
-conda list [-n env_name]
+# list installed packages in current active environment 
+conda list 
 # search package information from conda channels
 conda search package-name
 
-# update package in current active environment or [in a specific conda environment `env_name`]
-conda update [-n env_name] package-name
+# update package in current active environment
+conda update package-name
 # /***conda treats conda, anaconda, and python as package***/
 # update conda
 conda update conda
