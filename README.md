@@ -143,7 +143,8 @@ Overall, the course will provide students with a solid foundation in Python prog
 
 ## References
 * BOOK1: https://greenteapress.com/wp/think-python-2e/
-* BOOK2: https://automatetheboringstuff.com/
+* BOOK2: https://www.linkedin.com/groups/25827/?highlightedUpdateUrn=urn%3Ali%3AgroupPost%3A25827-7109345212191170560&q=highlightedFeedForGroups
+* BOOK3: https://automatetheboringstuff.com/
 * [Harvard CS50’s Introduction to Programming with Python](https://cs50.harvard.edu/python/2022/)
 * [Introducing ChatGPT](https://openai.com/blog/chatgpt)
 * [OpenAI Codex](https://openai.com/blog/openai-codex)
