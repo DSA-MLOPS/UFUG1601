@@ -1,11 +1,7 @@
 VENV = .venv
 PYTHON = $(VENV)/bin/python3
 PIP = $(VENV)/bin/pip3
-UVICORN = $(VENV)/bin/uvicorn
 STREAMLIT= $(VENV)/bin/streamlit
-
-include .env
-export
 
 # Need to use python 3.9 for aws lambda
 $(VENV)/bin/activate: requirements.txt
