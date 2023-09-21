@@ -67,6 +67,7 @@ This foundational course serves as a gateway to the dynamic world of computing, 
 	Simple exercises that demonstrate the usage of if-else statements and while loops.
 - Exciting Element: 
 	Create a simple game (like guessing a number) using Turtle graphics that utilizes control flow.
+- Reference: https://www.openbookproject.net/books/bpp4awd/ch04.html 
 - [Lab Notes](./lab_notes/week_3.md)
 
 ### Mod-Autumn Break Sep 29, Oct 6
