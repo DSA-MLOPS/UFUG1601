@@ -14,10 +14,10 @@ $(VENV)/bin/activate: requirements.txt
 init: $(VENV)/bin/activate
 
 app: $(VENV)/bin/activate
-	$(STREAMLIT) run app.py --server.port 8099 
+	$(STREAMLIT) run app.py --server.port 8098 
 
-gpt: $(VENV)/bin/activate
-	$(PYTHON) gpt_util.py
+solar: $(VENV)/bin/activate
+	$(PYTHON) solar.py
 
 clean:
 	rm -rf __pycache__

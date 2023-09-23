@@ -1,0 +1,8 @@
+.env
+.venv
+__pycache__/
+pdfs
+*.pdf
+*.png
+upstage/
+student_database.json
