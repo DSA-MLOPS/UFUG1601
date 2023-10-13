@@ -19,6 +19,9 @@ app: $(VENV)/bin/activate
 solar: $(VENV)/bin/activate
 	$(PYTHON) solar.py
 
+hw: $(VENV)/bin/activate
+	$(PYTHON) hw_parser.py
+
 clean:
 	rm -rf __pycache__
 	rm -rf $(VENV)

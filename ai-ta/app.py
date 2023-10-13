@@ -4,10 +4,9 @@ from PIL import Image
 from code_util import execute_code
 from solar import solar_grade
 from gpt_util import gpt_grade
+from hw_parser import get_head_contents
 
-# Read hw_dict from hw.json file
-with open("hw.json", "r") as f:
-    hw_dict = json.load(f)
+hw_dict = get_head_contents("hw.md")
 
 hw_keys = ["Home"] + list(hw_dict.keys())
 page = st.sidebar.selectbox("Select a quiz:", hw_keys)
@@ -26,7 +25,7 @@ elif page in hw_keys:
     st.markdown(hw_desc)
 
     #student_id = st.text_input("Student ID:")
-    student_code = st.text_area("Code:", height=300)
+    student_code = st.text_area("Write Code:", height=300)
 
     if st.button("Consult AI-TA"):
         if student_code:
