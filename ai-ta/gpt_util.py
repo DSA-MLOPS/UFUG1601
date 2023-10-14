@@ -1,34 +1,17 @@
 import openai
 import os
+from good_prompt import SYSTEM_PROMPT, get_prompt
 
 # Set openai.api_key to the OPENAI environment variable
 openai.api_key = os.environ["OPENAI_API_KEY"]
-SYSTEM_MSG = """You are a TA for a first year students. 
-You are nice and knowledgable. Provide detailed feedback to the student.
-"""
 OPENAI_MAX_TOKEN = 2048
 
 
 def gpt_grade(hw_desc, student_code, stdout, stderr, call_back=None):
-    content = f"""Grade this howework as a TA.
-Provide the homewor score [x out of 10] in the first line.
-Then, provide detailed reasons for the score.
-Please DO NOT PROVIDE solutions. NEVER!
-Use markdown syntax to format your feedback.
-
-### Homework Description:
-{hw_desc}
-
-### Student Code:
-{student_code}
-
-### Output:
-{stdout}
-
-"""
+    content = get_prompt(hw_desc, student_code, stdout, stderr)
     content = content[:OPENAI_MAX_TOKEN]
     msgs = [
-        {"role": "system", "content": SYSTEM_MSG},
+        {"role": "system", "content": SYSTEM_PROMPT},
         {"role": "user", "content": content},
     ]
 
@@ -40,10 +23,12 @@ Use markdown syntax to format your feedback.
     )
     if stream and call_back:
         for resp in response:
-            if "content" in resp.choices[0].delta and resp.choices[0].delta.get("content"):
-                result+= resp.choices[0].delta.get("content")
-                call_back(f"*{result}*")
-                
+            if "content" in resp.choices[0].delta and resp.choices[0].delta.get(
+                "content"
+            ):
+                result += resp.choices[0].delta.get("content")
+                call_back(result)
+
         return result
     else:
         status_code = response["choices"][0]["finish_reason"]

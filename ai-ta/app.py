@@ -54,12 +54,11 @@ elif page in hw_keys:
 
     if st.button("Consult AI-TA") and student_code:
         test_output, error = execute_code(student_code)
-        student_code = ""
         if error:
             st.error(f"Code execution failed: {error}")
         elif test_output is not None:
             st.success("Code execution successful:")
-            st.text(test_output)
+            st.code(test_output, language="shellSession")
             st.info("⏳ Checking your code with AI-TA (SOLAR)...")
             solar_res_box = st.empty()
             ta_comments = solar_grade(hw_desc, student_code, test_output, error, solar_res_box.markdown)
