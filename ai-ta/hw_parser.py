@@ -1,7 +1,7 @@
 def get_head_contents(md_filename):
     with open(md_filename, "r") as f:
         content = f.readlines()
-        
+
     head_contents = []
     current_content = {}
     for line in content:
@@ -13,12 +13,13 @@ def get_head_contents(md_filename):
             current_content["body"].append(line)
     if current_content:  # Add the last piece of content
         head_contents.append(current_content)
-        
-    heads = {}   
+
+    heads = {}
     for hc in head_contents:
-        heads[hc["title"]] = {"description": " ".join(hc['body'])}
-        
+        heads[hc["title"]] = {"description": " ".join(hc["body"])}
+
     return heads
+
 
 if __name__ == "__main__":
     heads = get_head_contents("hw.md")

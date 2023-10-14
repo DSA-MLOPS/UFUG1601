@@ -1,7 +1,8 @@
 import requests
 
-PISTON_URL = "https://emkc.org/api/v2/piston/execute" 
-PASS_CODE = "1234" 
+PISTON_URL = "https://emkc.org/api/v2/piston/execute"
+PASS_CODE = "1234"
+
 
 # Function to execute code using Piston API
 def execute_code(code):
@@ -12,7 +13,7 @@ def execute_code(code):
         "files": [
             {
                 "name": "my_cool_code.py",  # You can change the filename if needed
-                "content": code  # Pass the code as content
+                "content": code,  # Pass the code as content
             }
         ],
         "compile_timeout": 10000,
@@ -22,9 +23,11 @@ def execute_code(code):
     }
 
     # Make a POST request to the Piston API
-    piston_api_url = "https://emkc.org/api/v2/piston/execute"  # Replace with the actual API URL
+    piston_api_url = (
+        "https://emkc.org/api/v2/piston/execute"  # Replace with the actual API URL
+    )
     response = requests.post(piston_api_url, json=payload)
-        
+
     if response.status_code == 200:
         data = response.json()
         stdout_output = data.get("run", {}).get("stdout", "").strip()
@@ -33,6 +36,9 @@ def execute_code(code):
         if stderr_output:
             return None, stderr_output  # If there's stderr output, return it as error
         else:
-            return stdout_output, None  # If no stderr output, return stdout output and None as error
+            return (
+                stdout_output,
+                None,
+            )  # If no stderr output, return stdout output and None as error
     else:
         return None, None

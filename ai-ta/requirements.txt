@@ -1,3 +1,4 @@
 streamlit
 openai
-marko
+streamlit-ace
+qrcode
