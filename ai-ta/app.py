@@ -10,13 +10,18 @@ import qrcode
 import io
 import os
 
+MISTRAL_MODEL = "mistralai/Mistral-7B-Instruct-v0.1"
+QWEN_MODEL = "togethercomputer/Qwen-7B-Chat"
+DEFAULT_SPACE = "UFUG1601"
+DEFAULT_URL = "https://ta.sung.devstage.ai/"
+
 # Get team code
 get_query_params = st.experimental_get_query_params()
-space = get_query_params.get("space", ["hw"])[0]
+space = get_query_params.get("space", [DEFAULT_SPACE])[0]
 
 md_file = f"{space}.md"
 if not os.path.exists(md_file):
-    st.error(f"Team {space} not found!")
+    st.error(f"Space {space} not found!")
     st.stop()
 
 hw_dict = get_head_contents(md_file)
@@ -28,7 +33,7 @@ page = st.sidebar.selectbox("Select a quiz:", hw_keys)
 if page == "Home":
     st.title(f"AI-TA Page: {space}")
     st.write("Welcome to the AI-TA platform!")
-    qr_img = qrcode.make("https://https://ta.sung.devstage.ai/space={space}")
+    qr_img = qrcode.make(f"{DEFAULT_URL}?space={space}")
 
     # Convert the QR code to bytes
     img_bytes = io.BytesIO()
@@ -59,16 +64,43 @@ elif page in hw_keys:
         elif test_output is not None:
             st.success("Code execution successful:")
             st.code(test_output, language="shellSession")
+
+            st.info("⏳ Checking your code with AI-TA (Mistral)...")
+            mistral_res_box = st.empty()
+            solar_grade(
+                hw_desc,
+                student_code,
+                test_output,
+                error,
+                mistral_res_box.markdown,
+                model=MISTRAL_MODEL,
+            )
+
             st.info("⏳ Checking your code with AI-TA (SOLAR)...")
             solar_res_box = st.empty()
-            ta_comments = solar_grade(hw_desc, student_code, test_output, error, solar_res_box.markdown)
-            # st.markdown(ta_comments)
+            solar_grade(
+                hw_desc, student_code, test_output, error, solar_res_box.markdown
+            )
 
-            st.info("⏳ Checking your code with AI-TA (GPT)...")
-            gpt_res_box = st.empty()
-            ta_comments = gpt_grade(hw_desc, student_code, test_output, error, gpt_res_box.markdown)
-            # st.markdown(ta_comments)
+            st.info("⏳ Checking your code with AI-TA (Qwen)...")
+            qwen_res_box = st.empty()
+            solar_grade(
+                hw_desc,
+                student_code,
+                test_output,
+                error,
+                qwen_res_box.markdown,
+                model=QWEN_MODEL,
+            )
 
             st.success("🎉 AI-TA finished grading your code!")
+
+            if False and st.button("Show AI-TA (GPT)'s comments"):
+                st.info("⏳ Checking your code with AI-TA (GPT)...")
+                gpt_res_box = st.empty()
+                ta_comments = gpt_grade(
+                    hw_desc, student_code, test_output, error, gpt_res_box.markdown
+                )
+                st.success("🎉 AI-TA (GPT) finished grading your code!")
         else:
             st.error("Code execution failed. Please check your code.")

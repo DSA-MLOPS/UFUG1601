@@ -122,7 +122,9 @@ def solar_chat(system_prompt, messages):
 
 
 # Send a message
-def solar_chat_stream_on(system_prompt, messages, call_back_func):
+def solar_chat_stream_on(
+    system_prompt, messages, call_back_func, model="upstage/SOLAR-0-70b-16bit"
+):
     start_time = time.time()
     # if messages contains more tan 1024 tokens, only use the last 1024 tokens
     token_length = 0
@@ -142,7 +144,7 @@ def solar_chat_stream_on(system_prompt, messages, call_back_func):
 
     url = f"{TOGETHERAI_API_HOST}/inference"
     payload = {
-        "model": "upstage/SOLAR-0-70b-16bit",
+        "model": model,
         "prompt": prompt,
         "max_tokens": SOLAR_MAX_TOKEN,
         "temperature": SOLAR_TEMPERATURE,
@@ -167,7 +169,11 @@ def solar_chat_stream_on(system_prompt, messages, call_back_func):
 
                     json_dict = json.loads(json_text)
                     if "choices" in json_dict and len(json_dict["choices"]) > 0:
-                        result += json_dict["choices"][0]["text"]
+                        delta = json_dict["choices"][0]["text"]
+                        if any(substring in delta for substring in ["### User:", "<|im_end|>", "</s>"]):
+                            break
+                        
+                        result += delta
                         call_back_func(result)
 
             reply_body, prompt_suggestions = extract_body_and_prompt_suggestions(result)
@@ -191,15 +197,17 @@ def solar_chat_stream_on(system_prompt, messages, call_back_func):
         return "We're having trouble reading from SOLAR. Please try again or try new message mode."
 
 
-def solar_grade(hw_desc, student_code, stdout, stderr, call_back_func=None):
+def solar_grade(
+    hw_desc,
+    student_code,
+    stdout,
+    stderr,
+    call_back_func,
+    model="upstage/SOLAR-0-70b-16bit",
+):
     content = get_prompt(hw_desc, student_code, stdout, stderr)
-
     msgs = [{"role": "user", "content": content}]
-
-    if call_back_func:
-        return solar_chat_stream_on(SYSTEM_PROMPT, msgs, call_back_func)
-
-    return solar_chat(SYSTEM_PROMPT, msgs)
+    return solar_chat_stream_on(SYSTEM_PROMPT, msgs, call_back_func, model=model)
 
 
 def __test_msg_parser():
@@ -262,4 +270,4 @@ for i in range(5, 0, -1):
 *
 """
     stderr = ""
-    print(solar_grade(hw_desc, student_code, stdout, stderr))
+    solar_grade(hw_desc, student_code, stdout, stderr, print)
