@@ -19,7 +19,8 @@
 ## Grads
 - Mid-term (Ocr 27 in class TBA): 30%
 - Final exam (Dec ?): 40%
-- Final competition: 30% 
+- Final competition: 20%
+- HWs: 10%
 
 
 ## Course Overview:
