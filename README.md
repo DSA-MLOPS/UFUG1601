@@ -87,9 +87,8 @@ This foundational course serves as a gateway to the dynamic world of computing, 
 	Develop a pattern generator using Turtle, allowing students to see the immediate results of their loops.
 - [Lab Notes](./lab_notes/week_4.md)
 
-### Week 5 (Oct 20): Mod-term & Final project introduction (No labs)
 
-### Week 6 (Oct 27): Data Structures in Python - Lists and Dictionaries [[slides]()]
+### Week 5 (Oct 20): Data Structures in Python - Lists and Dictionaries [[slides]()]
 - Topics: 
 	Introduction to Python’s data structures, specifically lists and dictionaries.
 - Practical: 
@@ -97,6 +96,8 @@ This foundational course serves as a gateway to the dynamic world of computing, 
 - Exciting Element: 
 	Develop an interactive word game (like Hangman) using lists and dictionaries.
 - [Lab Notes](./lab_notes/week_5.md)
+
+### Week 6 (Oct 27): Mod-term & Final project introduction (No labs)
 
 ### Week 7 (Nov 3): Functions and Modularization in Python [[slides]()]
 - Topics: 
@@ -152,6 +153,7 @@ Overall, the course will provide students with a solid foundation in Python prog
 * BOOK1: https://greenteapress.com/wp/think-python-2e/
 * BOOK2: https://www.linkedin.com/groups/25827/?highlightedUpdateUrn=urn%3Ali%3AgroupPost%3A25827-7109345212191170560&q=highlightedFeedForGroups
 * BOOK3: https://automatetheboringstuff.com/
+* https://pythontutor.com/
 * [Harvard CS50’s Introduction to Programming with Python](https://cs50.harvard.edu/python/2022/)
 * [Introducing ChatGPT](https://openai.com/blog/chatgpt)
 * [OpenAI Codex](https://openai.com/blog/openai-codex)
