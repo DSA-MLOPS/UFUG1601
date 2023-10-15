@@ -39,7 +39,7 @@ This foundational course serves as a gateway to the dynamic world of computing, 
 
 ## Course Outline:
 
-### Week 1 (Sep 8): Introduction to Python and the Environment [[slides]()]
+### Week 1 (Sep 8): Introduction to Python and the Environment 
 - Topics: 
 	Python history, installing Python, setting up your coding environment, the interpreter, basic commands, and introduction to Python’s syntax and semantics.
 - Practical: 
@@ -57,7 +57,7 @@ This foundational course serves as a gateway to the dynamic world of computing, 
 
 ---
 
-### Week 2 (Sep 15): Variables, Data Types, and Assignments [[slides]()]
+### Week 2 (Sep 15): Variables, Data Types, and Assignments 
 - Topics: 
 	Discuss different data types like integers, floating-point numbers, strings, and booleans. Also cover variables and assignments.
 - Practical: 
@@ -66,7 +66,7 @@ This foundational course serves as a gateway to the dynamic world of computing, 
 	Create a fun interactive quiz using Turtle graphics, where the answers to the questions will involve the data types and variables learned.
 - [Lab Notes](./lab_notes/week_2.md)
 
-### Week 3 (Sep 22): Control Flow in Python - If-Else, While Loop [[slides]()]
+### Week 3 (Sep 22): Control Flow in Python - If-Else, While Loop 
 - Topics: 
 	Discuss control flow tools like if, elif, else and while loop. Introduction to indentation in Python.
 - Practical: 
@@ -78,7 +78,7 @@ This foundational course serves as a gateway to the dynamic world of computing, 
 
 ### Mod-Autumn Break Sep 29, Oct 6
 
-### Week 4 (Oct 13): Looping in Python - For Loop, Break, and Continue [[slides]()]
+### Week 4 (Oct 13): Looping in Python - For Loop, Break, and Continue 
 - Topics: 
 	Discuss for loop, break and continue statements. Distinguish between for and while loops.
 - Practical: 
@@ -88,7 +88,7 @@ This foundational course serves as a gateway to the dynamic world of computing, 
 - [Lab Notes](./lab_notes/week_4.md)
 
 
-### Week 5 (Oct 20): Data Structures in Python - Lists and Dictionaries [[slides]()]
+### Week 5 (Oct 20): Data Structures in Python - Lists and Dictionaries 
 - Topics: 
 	Introduction to Python’s data structures, specifically lists and dictionaries.
 - Practical: 
@@ -99,7 +99,7 @@ This foundational course serves as a gateway to the dynamic world of computing, 
 
 ### Week 6 (Oct 27): Mod-term & Final project introduction (No labs)
 
-### Week 7 (Nov 3): Functions and Modularization in Python [[slides]()]
+### Week 7 (Nov 3): Functions and Modularization in Python 
 - Topics: 
 	Define what functions are, their use, and the importance of modularization in coding. Introduce the concept of parameters and return values.
 - Practical: 
@@ -108,7 +108,7 @@ This foundational course serves as a gateway to the dynamic world of computing, 
 	Host a code challenge where students create a complex shape or image using Turtle graphics by writing and calling their own functions.
 - [Lab Notes](./lab_notes/week_6.md)
 
-### Week 8 (Nov 10): Basic Object Concepts - Classes and Objects [[slides]()]
+### Week 8 (Nov 10): Basic Object Concepts - Classes and Objects 
 - Topics: 
 	Discuss Object-Oriented Programming, classes, objects, methods, and attributes.
 - Practical: 
@@ -117,7 +117,7 @@ This foundational course serves as a gateway to the dynamic world of computing, 
 	Construct simple simulations (like bouncing balls) using classes and objects in Turtle graphics.
 - [Lab Notes](./lab_notes/week_7.md)
 
-### Week 9 (Nov 17): Basic File Handling [[slides]()]
+### Week 9 (Nov 17): Basic File Handling 
 - Topics: 
 	Introduce how to open, read, write, and close files in Python.
 - Practical: 
@@ -126,7 +126,7 @@ This foundational course serves as a gateway to the dynamic world of computing, 
 	Create a simple program that generates Turtle graphics based on commands read from a file.
 - [Lab Notes](./lab_notes/week_8.md)
 
-### Week 10 (Nov 24): Review and Advanced Topics [[slides]()]
+### Week 10 (Nov 24): Review and Advanced Topics 
 - Topics: 
 	Quick review of the material covered so far. Introduction to some more advanced topics like list comprehension, lambda functions, and exception handling.
 - Practical: 
@@ -135,7 +135,7 @@ This foundational course serves as a gateway to the dynamic world of computing, 
 	Design and code a more sophisticated game or graphics program in Turtle that uses these advanced concepts.
 - [Lab Notes](./lab_notes/week_9.md)
 
-### Week 11 (Dec 1): Final Project and Wrap-Up [[slides]()]
+### Week 11 (Dec 1): Final Project and Wrap-Up 
 - Topics: 
 	Review the entire course, clarify doubts, and discuss more resources to learn Python.
 - Practical: 
