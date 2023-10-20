@@ -5,7 +5,6 @@ from code_util import execute_code
 
 PASS_CODE = "1234" 
 
-
 # Function to simulate the rock-paper-scissors game
 def rps(player1, player2):
     choices = ['rock', 'paper', 'scissors']
@@ -39,6 +38,32 @@ def board_to_code(board):
             code += str(board[i][j])
     return code
 
+# check whether the board has winner
+def check_winner(board):
+    # row
+    for row in board:
+        if row.count(1) == 3:
+            return 1
+        elif row.count(2) == 3:
+            return 2
+    # column
+    for col in range(3):
+        if board[0][col] == board[1][col] == board[2][col] == 1:
+            return 1
+        elif board[0][col] == board[1][col] == board[2][col] == 2:
+            return 2
+    # diag
+    if board[0][0] == board[1][1] == board[2][2] == 1:
+        return 1
+    if board[0][0] == board[1][1] == board[2][2] == 2:
+        return 2
+    if board[0][2] == board[1][1] == board[2][0] == 1:
+        return 1
+    if board[0][2] == board[1][1] == board[2][0] == 2:
+        return 2
+
+    return -1
+
 st.title("TTT Tournament")
 
 student_records = db_select_query("SELECT * FROM students")
@@ -67,37 +92,41 @@ else:
                 # Execute the student code to get their choice
                 # bord state to python code
                 stub_code = "board = " + str(board) + "\n"
-                main_code = """
-x, y = next_move(board)
-print(x, y)"""
-                
+                main_code = """x, y = next_move(board) print(x, y)"""               
                 player1_choice, _ = execute_code(stub_code + player1[1] + main_code)  # player1[1] is code
                 play1_x, play1_y = player1_choice.split()
                 play1_x = int(play1_x)
                 play1_y = int(play1_y)
-                # if they are 0
+                # if they are 0, loss the game
+                if board[play1_x][play1_y]!=0: break
                 board[play1_x][play1_y] = 1
                 
                 player2_choice, _ = execute_code(stub_code + player2[1] + main_code)  # player2[1] is code
                 play2_x, play2_y = player2_choice.split()
                 play2_x = int(play2_x)
                 play2_y = int(play2_y)
-                # if they are 0
+                # if they are 0, loss the game
+                if board[play2_x][play2_y]!=0: break
                 board[play2_x][play2_y] = 2
-                
-                # Judge the result
-                # if thee is a winner, break
                 
                 player_1_student_id = player1[0]  # player1[0] is student_id
                 player_2_student_id = player2[0]  # player2[0] is student_id
 
                 st.write(f"{player_1_student_id}: {player1_choice}")
                 st.write(f"{player_2_student_id}: {player2_choice}")
-
-
-            # Update the scores
-            # findout winner and update the score
                 
+                # Judge the result: if there is a winner, break
+                if check_winner(board) < 0: break
+                if check_winner(board) == 1: 
+                    winner = player1
+                    winner[2] += 1
+                    break
+                if check_winner(board) == 2: 
+                    winner = player2
+                    winner[2] += 1
+                    break
+
+            # Update the database
             st.write(f"Winner: {winner[0]}, Score: {winner[2]}")
             db_execute_query("UPDATE students SET score = ? WHERE student_id = ?", (winner[2], winner[0]))
                 
