@@ -19,6 +19,9 @@ app: $(VENV)/bin/activate
 solar: $(VENV)/bin/activate
 	$(PYTHON) solar.py
 
+gpt: $(VENV)/bin/activate
+	$(PYTHON) gpt_util.py
+
 hw: $(VENV)/bin/activate
 	$(PYTHON) hw_parser.py
 

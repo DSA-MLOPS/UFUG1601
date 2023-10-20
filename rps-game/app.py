@@ -1,6 +1,6 @@
 import streamlit as st
 import random
-from db_util import c, conn
+from db_util import db_execute_query, db_select_query
 from code_util import execute_code
 
 PASS_CODE = "1234" 
@@ -38,8 +38,7 @@ st.title("Rock-Paper-Scissors Tournament")
 hello_world, _ = execute_code("print('Hello World!')")
 st.write(hello_world)
 
-c.execute("SELECT * FROM students")
-student_records = c.fetchall()
+student_records = db_select_query("SELECT * FROM students")
 st.write("We have {} student codes.".format(len(student_records)))
 
 # Show participants
@@ -82,12 +81,10 @@ else:
                 winner = player2
                 
             st.write(f"Winner: {winner[0]}, Score: {winner[2]}")
-            c.execute("UPDATE students SET score = ? WHERE student_id = ?", (winner[2], winner[0]))
-            conn.commit()
+            db_execute_query("UPDATE students SET score = ? WHERE student_id = ?", (winner[2], winner[0]))
                 
         st.header("Tournament Standings")
-        c.execute("SELECT * FROM students ORDER BY score DESC")
-        student_records = c.fetchall()
+        student_records = db_select_query("SELECT * FROM students ORDER BY score DESC")
         for record in student_records:
             st.write(f"{record[0]}: {record[2]}")
 

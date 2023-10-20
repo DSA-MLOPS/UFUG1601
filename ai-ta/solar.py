@@ -210,6 +210,20 @@ def solar_grade(
     return solar_chat_stream_on(SYSTEM_PROMPT, msgs, call_back_func, model=model)
 
 
+def solar_mk_quiz(course_name, topic="any"):
+    system_prompt = f"""
+You are a very famous professor in {course_name} programming class and you want to make a quiz for your students.
+"""
+    content = f"""
+# Quiz: {topic}
+
+Please write one quiz for {topic} topic for {course_name} programming class. 
+It should include title, description, and questions and code output in md format. Make something useful for students and yet fun.
+Only One Quiz, please.
+"""
+    msgs = [{"role": "user", "content": content}]
+    return solar_chat(system_prompt, msgs)
+
 def __test_msg_parser():
     # Test the function
     s = """
@@ -236,6 +250,9 @@ Is there anything specific you'd like to talk about or learn more about? I'd be 
 
 
 if __name__ == "__main__":
+    print (solar_mk_quiz("Python Programming"))
+    exit(0) 
+
     solar_chat_stream_on("Hello", [{"role": "user", "content": "Hello"}], print)
 
     __test_msg_parser()
