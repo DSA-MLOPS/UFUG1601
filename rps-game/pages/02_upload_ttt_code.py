@@ -5,7 +5,7 @@ from db_util import db_execute_query, db_select_query
 
 
 st.title("Upload Student Code")
-st.write("Please enter your student ID and Python code with the rps() function below.")
+st.write("Please enter your student ID and next_move(board) that returns x, y function below.")
 
 student_id = st.text_input("Student ID:")
 # student_code = st.text_area("Write program that prints out 'rock', 'scissors', or 'paper'")
@@ -20,10 +20,34 @@ student_code = st_ace(
     keybinding="vscode",
     show_gutter=True,
     placeholder="Write your python code here...",
+    value="""### we will pass board (3x3 list)
+# 0: nothing
+# 1: X (letter X)
+# 2: Y (letter Y)
+#
+# You need to return x, y
+
+def next_move(board):\n
+    return 0, 0
+"""
 )
 
-if st.button("Upload Code") and student_code and student_id:
-    test_output, error = execute_code(student_code)
+basic_code = """
+board = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+x, y = next_move(board)
+
+assert x >= 0 and x <= 2
+assert y >= 0 and y <= 2
+"""
+
+if st.button("Upload Code"):
+    if not student_id:
+        st.error("Student ID cannot be empty.")
+        st.stop()
+    if not student_code:
+        st.error("Student code cannot be empty.")
+        st.stop()
+    test_output, error = execute_code(student_code + basic_code)
     if error:
         st.error(f"Code execution failed: {error}")
     elif test_output is not None:

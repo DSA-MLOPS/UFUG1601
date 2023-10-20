@@ -1,6 +1,6 @@
 import streamlit as st
 import random
-from db_util import c, conn
+from db_util import db_execute_query, db_select_query
 from code_util import execute_code
 
 PASS_CODE = "1234" 
@@ -32,14 +32,16 @@ def rps(player1, player2):
     else:
         return 2
 
+def board_to_code(board):
+    code = "board = "
+    for i in range(3):
+        for j in range(3):
+            code += str(board[i][j])
+    return code
 
-st.title("Rock-Paper-Scissors Tournament")
+st.title("TTT Tournament")
 
-hello_world, _ = execute_code("print('Hello World!')")
-st.write(hello_world)
-
-c.execute("SELECT * FROM students")
-student_records = c.fetchall()
+student_records = db_select_query("SELECT * FROM students")
 st.write("We have {} student codes.".format(len(student_records)))
 
 # Show participants
@@ -57,37 +59,50 @@ else:
         winner = list(student_records[0])
         for i in range(1, len(student_records)):
             st.markdown("### Round {}".format(i))
+            board = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
             player1 = list(winner)
             player2 = list(student_records[i])
 
-            # Execute the student code to get their choice
-            player1_choice, _ = execute_code(player1[1])  # player1[1] is code
-            player2_choice, _ = execute_code(player2[1])  # player2[1] is code
-            
-            player_1_student_id = player1[0]  # player1[0] is student_id
-            player_2_student_id = player2[0]  # player2[0] is student_id
+            while(True):
+                # Execute the student code to get their choice
+                # bord state to python code
+                stub_code = "board = " + str(board) + "\n"
+                main_code = """
+x, y = next_move(board)
+print(x, y)"""
+                
+                player1_choice, _ = execute_code(stub_code + player1[1] + main_code)  # player1[1] is code
+                play1_x, play1_y = player1_choice.split()
+                play1_x = int(play1_x)
+                play1_y = int(play1_y)
+                # if they are 0
+                board[play1_x][play1_y] = 1
+                
+                player2_choice, _ = execute_code(stub_code + player2[1] + main_code)  # player2[1] is code
+                play2_x, play2_y = player2_choice.split()
+                play2_x = int(play2_x)
+                play2_y = int(play2_y)
+                # if they are 0
+                board[play2_x][play2_y] = 2
+                
+                # Judge the result
+                # if thee is a winner, break
+                
+                player_1_student_id = player1[0]  # player1[0] is student_id
+                player_2_student_id = player2[0]  # player2[0] is student_id
 
-            st.write(f"{player_1_student_id}: {player1_choice}")
-            st.write(f"{player_2_student_id}: {player2_choice}")
+                st.write(f"{player_1_student_id}: {player1_choice}")
+                st.write(f"{player_2_student_id}: {player2_choice}")
 
-            result = rps(player1_choice, player2_choice)
 
             # Update the scores
-            
-            if result == 1 or result == 0:    
-                player1[2] = player1[2] + 1  # player1[2] is score
-                winner = player1
-            elif result == 2:
-                player2[2] = player2[2] + 1  # player2[2] is score
-                winner = player2
+            # findout winner and update the score
                 
             st.write(f"Winner: {winner[0]}, Score: {winner[2]}")
-            c.execute("UPDATE students SET score = ? WHERE student_id = ?", (winner[2], winner[0]))
-            conn.commit()
+            db_execute_query("UPDATE students SET score = ? WHERE student_id = ?", (winner[2], winner[0]))
                 
         st.header("Tournament Standings")
-        c.execute("SELECT * FROM students ORDER BY score DESC")
-        student_records = c.fetchall()
+        student_records = db_select_query("SELECT * FROM students ORDER BY score DESC")
         for record in student_records:
             st.write(f"{record[0]}: {record[2]}")
 
