@@ -52,8 +52,9 @@ if st.button("Upload Code"):
         st.error(f"Code execution failed: {error}")
     elif test_output is not None:
         st.success(f"Code execution successful: {test_output}")
-        row = db_select_query('SELECT * FROM students WHERE student_id=?', (student_id,))
-        if row is None:
+        row = db_select_query('SELECT * FROM students WHERE student_id=?', (student_id,)) # return a list
+        print(row)
+        if len(row)==0:
             db_execute_query("INSERT INTO students VALUES (?, ?, 0)", (student_id, student_code))
             st.success("Code uploaded successfully!")
         else:

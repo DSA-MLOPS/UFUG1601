@@ -14,7 +14,8 @@ def db_execute_query(query, params=None, database_name=DATABASE_NAME):
         # Open connection
         conn = sqlite3.connect(database_name)
         c = conn.cursor()
-
+        c.execute('''CREATE TABLE IF NOT EXISTS students
+                (student_id text, code text, score integer)''')
         # Execute query with parameters and commit changes
         if params:
             c.execute(query, params)

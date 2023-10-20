@@ -57,12 +57,20 @@ def check_winner(board):
         return 1
     if board[0][0] == board[1][1] == board[2][2] == 2:
         return 2
+    # reverse diag
     if board[0][2] == board[1][1] == board[2][0] == 1:
         return 1
     if board[0][2] == board[1][1] == board[2][0] == 2:
         return 2
-
+    
     return -1
+
+def print_tic_tac_toe(board):
+    symbol_map = {0: "0", 1: "X", 2: "Y"}
+    for row in board:
+        print(" | ".join(symbol_map[cell] for cell in row))
+        print("-" * 9)
+    print("\n")
 
 st.title("TTT Tournament")
 
@@ -83,30 +91,43 @@ else:
         random.shuffle(student_records)
         winner = list(student_records[0])
         for i in range(1, len(student_records)):
+            print("### Round {}".format(i), "\n")
             st.markdown("### Round {}".format(i))
             board = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
             player1 = list(winner)
             player2 = list(student_records[i])
+            print(f"{player1[0]} vs {player2[0]}")
 
+            win_flag = False
             while(True):
                 # Execute the student code to get their choice
                 # bord state to python code
                 stub_code = "board = " + str(board) + "\n"
-                main_code = """x, y = next_move(board) print(x, y)"""               
+                main_code = """print(next_move(board))"""        
                 player1_choice, _ = execute_code(stub_code + player1[1] + main_code)  # player1[1] is code
-                play1_x, play1_y = player1_choice.split()
-                play1_x = int(play1_x)
-                play1_y = int(play1_y)
+                play1_x, play1_y = eval(player1_choice)
                 # if they are 0, loss the game
-                if board[play1_x][play1_y]!=0: break
+                if board[play1_x][play1_y]!=0: 
+                    winner = player2
+                    winner[2] += 1
+                    win_flag = True
+                    print(player1[0], ": ", play1_x, play1_y)
+                    print_tic_tac_toe(board)
+                    print("Wrong move!")
+                    break
                 board[play1_x][play1_y] = 1
                 
                 player2_choice, _ = execute_code(stub_code + player2[1] + main_code)  # player2[1] is code
-                play2_x, play2_y = player2_choice.split()
-                play2_x = int(play2_x)
-                play2_y = int(play2_y)
+                play2_x, play2_y = eval(player2_choice)
                 # if they are 0, loss the game
-                if board[play2_x][play2_y]!=0: break
+                if board[play2_x][play2_y]!=0: 
+                    winner = player1
+                    winner[2] += 1
+                    win_flag = True
+                    print(player2[0], ": ", play2_x, play2_y)
+                    print_tic_tac_toe(board)
+                    print("Wrong move!")
+                    break
                 board[play2_x][play2_y] = 2
                 
                 player_1_student_id = player1[0]  # player1[0] is student_id
@@ -116,20 +137,28 @@ else:
                 st.write(f"{player_2_student_id}: {player2_choice}")
                 
                 # Judge the result: if there is a winner, break
-                if check_winner(board) < 0: break
+                if check_winner(board) < 0: 
+                    print_tic_tac_toe(board)
+                    continue
                 if check_winner(board) == 1: 
                     winner = player1
                     winner[2] += 1
+                    win_flag = True
+                    print_tic_tac_toe(board)
                     break
                 if check_winner(board) == 2: 
                     winner = player2
                     winner[2] += 1
+                    win_flag = True
+                    print_tic_tac_toe(board)
                     break
 
             # Update the database
-            st.write(f"Winner: {winner[0]}, Score: {winner[2]}")
-            db_execute_query("UPDATE students SET score = ? WHERE student_id = ?", (winner[2], winner[0]))
-                
+            if win_flag:
+                st.write(f"Winner: {winner[0]}, Score: {winner[2]}")
+                db_execute_query("UPDATE students SET score = ? WHERE student_id = ?", (winner[2], winner[0]))
+            else:
+                st.write(f"Draw 1 vs 1, no one wins!")   
         st.header("Tournament Standings")
         student_records = db_select_query("SELECT * FROM students ORDER BY score DESC")
         for record in student_records:
