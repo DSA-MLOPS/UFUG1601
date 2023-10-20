@@ -28,7 +28,7 @@ def db_execute_query(query, params=None, database_name=DATABASE_NAME):
         if conn:
             conn.close()
 
-def db_select_query(query, database_name=DATABASE_NAME):
+def db_select_query(query, params=None, database_name=DATABASE_NAME):
     """
     Execute a selection query, such as a SELECT statement.
 
@@ -43,7 +43,11 @@ def db_select_query(query, database_name=DATABASE_NAME):
         c = conn.cursor()
 
         # Execute query and fetch results
-        c.execute(query)
+        if params:
+            c.execute(query, params)
+        else:
+            c.execute(query)
+            
         rows = c.fetchall()
     except sqlite3.Error as e:
         print(f"An error occurred: {e}")
