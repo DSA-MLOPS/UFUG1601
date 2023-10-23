@@ -96,7 +96,7 @@ else:
             win_flag = False
             step = 1
             while(True):
-                st.markdown(f"------------------ Step {step} ------------------")
+                st.markdown(f"--------------- Step {step} ---------------")
                 step += 1 
                 # Execute the student 1 code of next_move() function to get their choice
                 play1_code = f"{player1[1]}\nboard = {board}\nprint(next_move(board))"      
