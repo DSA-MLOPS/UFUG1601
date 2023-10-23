@@ -87,11 +87,12 @@ else:
             st.markdown("### Round {}: {} vs {}".format(i, player1[0], player2[0]))
             print("### Round {}: {} (X) vs {} (O)".format(i, player1[0], player2[0]))
 
-            board = random_board(board)
-            st.markdown("**Random Initialized Board:**")
-            st.text(print_board(board))
+            # for version 2 
+            # board = random_board(board)
+            # st.markdown("**Random Initialized Board:**")
+            # st.text(print_board(board))
 
-            st.markdown("**======> Start Playing ...**")
+            st.markdown("**======> Start Playing <======**")
             win_flag = False
             step = 1
             while(True):
