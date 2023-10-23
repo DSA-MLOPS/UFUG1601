@@ -14,7 +14,7 @@ $(VENV)/bin/activate: requirements.txt
 init: $(VENV)/bin/activate
 
 app: $(VENV)/bin/activate
-	$(STREAMLIT) run 03_ttt_play.py --server.port 2023 
+	$(STREAMLIT) run app.py --server.port 2023 
 
 gpt: $(VENV)/bin/activate
 	$(PYTHON) gpt_util.py

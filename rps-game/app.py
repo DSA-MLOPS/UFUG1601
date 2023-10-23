@@ -121,6 +121,7 @@ else:
                     if "Tie" != win_flag:
                         result = f"The winner is {player1[0]} and continues to the next round!"
                         winner = player1
+                        winner[2] += 1
                     else:
                         result = f"They are {win_flag}!"
                     st.write(result)
@@ -150,6 +151,7 @@ else:
                     if "Tie" != win_flag:
                         result = f"The winner is {player2[0]} and continues to the next round!"
                         winner = player2
+                        winner[2] += 1
                     else:
                         result = f"They are {win_flag}!"
                     st.write(result)
