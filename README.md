@@ -126,16 +126,9 @@ This foundational course serves as a gateway to the dynamic world of computing, 
 	Create a simple program that generates Turtle graphics based on commands read from a file.
 - [Lab Notes](./lab_notes/week_8.md)
 
-### Week 10 (Nov 24): Review and Advanced Topics 
-- Topics: 
-	Quick review of the material covered so far. Introduction to some more advanced topics like list comprehension, lambda functions, and exception handling.
-- Practical: 
-	Solve complex problems that use all the concepts learned so far.
-- Exciting Element: 
-	Design and code a more sophisticated game or graphics program in Turtle that uses these advanced concepts.
-- [Lab Notes](./lab_notes/week_9.md)
-
-### Week 11 (Dec 1): Final Project and Wrap-Up 
+### Week 10 (Nov 24): Basic Object Concepts - Classes and Objects 
+### Week 11 (Dec1): DB and Streamlit
+### Week 12 (Dec 8): Final Project and Wrap-Up 
 - Topics: 
 	Review the entire course, clarify doubts, and discuss more resources to learn Python.
 - Practical: 
